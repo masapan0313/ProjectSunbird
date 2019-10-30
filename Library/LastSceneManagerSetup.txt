@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Masato/Scene/shiefVSpolice.unity
+- path: Assets/Shota/Scene/shota_test.unity
   isLoaded: 1
   isActive: 1
