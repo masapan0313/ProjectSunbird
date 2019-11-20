@@ -223,10 +223,18 @@
     <Compile Include="Assets\Masato\Script\PoliceMoveScript.cs" />
     <Compile Include="Assets\Masato\Script\thiefMoveScript.cs" />
     <Compile Include="Assets\Shota\Delete.cs" />
+    <Compile Include="Assets\Shota\rotate.cs" />
+    <Compile Include="Assets\Shota\Scripts\Charactor\Enemy\shota_Doron.cs" />
+    <Compile Include="Assets\Shota\Scripts\Charactor\Enemy\shota_Enemy.cs" />
+    <Compile Include="Assets\Shota\Scripts\Charactor\Enemy\shota_HeadQuarters.cs" />
+    <Compile Include="Assets\Shota\Scripts\Charactor\Enemy\shota_Police.cs" />
+    <Compile Include="Assets\Shota\Scripts\Charactor\Player\shota_Player_Move.cs" />
     <Compile Include="Assets\Shota\Scripts\color_switch\shota_Color_Box.cs" />
     <Compile Include="Assets\Shota\Scripts\color_switch\shota_Color_Switch.cs" />
     <Compile Include="Assets\Shota\Scripts\color_switch\shota_lock_state.cs" />
     <Compile Include="Assets\Shota\Scripts\enum\shota_Enum_list.cs" />
+    <Compile Include="Assets\Shota\Scripts\Node\shota_Astar.cs" />
+    <Compile Include="Assets\Shota\Scripts\Node\shota_NodePoint.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
