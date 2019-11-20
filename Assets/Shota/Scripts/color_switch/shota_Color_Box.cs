@@ -9,26 +9,30 @@ public class shota_Color_Box : MonoBehaviour {
 
     [SerializeField] private List<shota_Color_Switch> KeyTarget; // 鍵束
 
-    [SerializeField] private Text text; // テスト用
+    //[SerializeField] private Text text; // テスト用
 
     string str; // テスト用
+
+    public bool Debug_mode;
 
     private void Start()
     {
         KeyTarget.Sort((a,b) => a.GetKeyMark() - b.GetKeyMark());
         LockList.Sort((a, b) => a.GetMark() - b.GetMark());
 
-        str += "いろあわせ \n";
-        foreach(shota_lock_state ll in LockList)
+        if (Debug_mode)
         {
-            str += "マーク：";
-            str += ll.GetMark().ToString();
-            str += "色：";
-            str += ll.GetSwitchColor().ToString();
-            str += " \n ";
+            str += "いろあわせ \n";
+            foreach (shota_lock_state ll in LockList)
+            {
+                str += "マーク：";
+                str += ll.GetMark().ToString();
+                str += "色：";
+                str += ll.GetSwitchColor().ToString();
+                str += " \n ";
+            }
+            //text.text = str;
         }
-        text.text = str;
-
         
     }
 
@@ -54,6 +58,7 @@ public class shota_Color_Box : MonoBehaviour {
         if(opencount == LockList.Count)
         {
             Debug.Log("すべてそろいました!!!!!!!!!!!!!");
+            gameObject.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 0);
         }
     }
     
