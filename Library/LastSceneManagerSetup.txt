@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Shota/Scene/shota_police_test.unity
+- path: Assets/Shota/Scene/shota_tuto.unity
   isLoaded: 1
   isActive: 1

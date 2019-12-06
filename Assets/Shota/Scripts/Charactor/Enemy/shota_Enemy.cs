@@ -9,7 +9,7 @@ public class shota_Enemy : ScriptableObject {
     public enum ENEMY_STATE
     {
         PATROL, // 巡回
-        SEARCH, // これいる？
+        NMA_SCRPT, // ナビメッシュエージェントによる移動から通常の移動方法へ切り替える
         ALARM, // 集合
         RUN, // 追跡
         BACK, // 巡回に戻る

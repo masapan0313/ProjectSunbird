@@ -1,0 +1,295 @@
+fileFormatVersion: 2
+guid: 4d808c9682e326f47ae123bf59784a96
+timeCreated: 1575341360
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone.001
+    100004: Bone.003_L
+    100006: Bone.003_L.001
+    100008: Bone.003_L.002
+    100010: Bone.003_L.002_end
+    100012: Bone.003_R
+    100014: Bone.003_R.001
+    100016: Bone.003_R.002
+    100018: Bone.003_R.002_end
+    100020: C_Foot.L
+    100022: C_Foot.L_end
+    100024: C_Foot.R
+    100026: C_Foot.R_end
+    100028: C_Hand.L
+    100030: C_Hand.L_end
+    100032: C_Hand.R
+    100034: C_Hand.R_end
+    100036: C_Knee.L
+    100038: C_Knee.L_end
+    100040: C_Knee.R
+    100042: C_Knee.R_end
+    100044: C_UpperArm.L
+    100046: C_UpperArm.L_end
+    100048: C_UpperArm.R
+    100050: C_UpperArm.R_end
+    100052: Cube
+    100054: Hand.L
+    100056: Hand.L_end
+    100058: Hand.R
+    100060: Hand.R_end
+    100062: Head
+    100064: Head_end
+    100066: HightSpine
+    100068: HightSpine.001
+    100070: HightSpine.001_end
+    100072: LowSpine
+    100074: //RootNode
+    100076: Shoulder.R
+    100078: Shoulder_L
+    100080: UpperArm.L
+    100082: UpperArm.R
+    400000: Armature
+    400002: Bone.001
+    400004: Bone.003_L
+    400006: Bone.003_L.001
+    400008: Bone.003_L.002
+    400010: Bone.003_L.002_end
+    400012: Bone.003_R
+    400014: Bone.003_R.001
+    400016: Bone.003_R.002
+    400018: Bone.003_R.002_end
+    400020: C_Foot.L
+    400022: C_Foot.L_end
+    400024: C_Foot.R
+    400026: C_Foot.R_end
+    400028: C_Hand.L
+    400030: C_Hand.L_end
+    400032: C_Hand.R
+    400034: C_Hand.R_end
+    400036: C_Knee.L
+    400038: C_Knee.L_end
+    400040: C_Knee.R
+    400042: C_Knee.R_end
+    400044: C_UpperArm.L
+    400046: C_UpperArm.L_end
+    400048: C_UpperArm.R
+    400050: C_UpperArm.R_end
+    400052: Cube
+    400054: Hand.L
+    400056: Hand.L_end
+    400058: Hand.R
+    400060: Hand.R_end
+    400062: Head
+    400064: Head_end
+    400066: HightSpine
+    400068: HightSpine.001
+    400070: HightSpine.001_end
+    400072: LowSpine
+    400074: //RootNode
+    400076: Shoulder.R
+    400078: Shoulder_L
+    400080: UpperArm.L
+    400082: UpperArm.R
+    4300000: Cube
+    7400000: Idle.001
+    7400002: PIck UP
+    7400004: Armature|Walk
+    7400006: Idle.001 (1)
+    9500000: //RootNode
+    13700000: Cube
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: e2e61f39727efa449a7d9a39b7b90ba2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: ec3c0724eb914194d89c4ca25fd69ead, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 910e7d7702896014fa7647224d9787de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: dcf4136aa9a41784c82df90725b47d0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 67e7c5ba626ed544d8cd905feb2e9b2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 02d07610be45f024eb53840b611f1847, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: e9021f698c5915c48aee89c64db0c6dc, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle.001
+      takeName: Armature|Idle.001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: PIck UP
+      takeName: Armature|PIck UP
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle.001 (1)
+      takeName: Armature|Idle.001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
