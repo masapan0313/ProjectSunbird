@@ -22,6 +22,7 @@ public class shota_NodePoint : MonoBehaviour {
     private void Awake()
     {
         nodePos = gameObject.transform.position;
+        GetComponent<MeshRenderer>().enabled = false;
     }
 
 

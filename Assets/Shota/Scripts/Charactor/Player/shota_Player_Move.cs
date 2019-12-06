@@ -8,12 +8,22 @@ public class shota_Player_Move : MonoBehaviour {
 //	void Start () {
 //        animator = gameObject.GetComponent<Animator>();
 //	}
-	[SerializeField] float speed = 0.5F;
-    [SerializeField] public float rotationSpeed = 10.0F;
+	[SerializeField]
+    float speed = 0.5F;
+    [SerializeField]
+    public float rotationSpeed = 10.0F;
 
     private float MoveDir_H, MoveDir_V;
 
     Rigidbody rb;
+
+    [SerializeField]
+    shota_Player_animation_controller spac;
+
+    [SerializeField]
+    KeyCode ActionButton;
+
+    private Vector3 lookDir;
 
     private void Start()
     {
@@ -23,6 +33,7 @@ public class shota_Player_Move : MonoBehaviour {
     private void FixedUpdate()
     {
         rb.velocity = new Vector3(MoveDir_H, 0, MoveDir_V) * speed * Time.deltaTime;
+        transform.rotation = Quaternion.LookRotation(lookDir);
     }
 
     void Update()
@@ -33,33 +44,31 @@ public class shota_Player_Move : MonoBehaviour {
         MoveDir_H = Input.GetAxisRaw("Horizontal");
         MoveDir_V = Input.GetAxisRaw("Vertical");
 
-        //if (Input.GetKey(KeyCode.UpArrow))
-        //{
-        //    //animator.SetBool("is_Walk", true);
-        //    transform.position += transform.forward * (speed * Time.deltaTime);
-        //}
-        //else
-        //{
-        //    //animator.SetBool("is_Walk", false);
-        //}
+        
 
-        //if (Input.GetKey(KeyCode.LeftArrow))
-        //{
-        //    //animator.SetBool("is_LeftWalk", true);
-        //    transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
-        //}
-        //else
-        //{
-        //    //animator.SetBool("is_LeftWalk", false);
-        //}
-        //if (Input.GetKey(KeyCode.RightArrow))
-        //{
-        //    //animator.SetBool("is_RightWalk", true);
-        //    transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
-        //}
-        //else
-        //{
-        //    //animator.SetBool("is_RightWalk", false);
-        //}
+        if(MoveDir_H == 0 && MoveDir_V == 0)
+        {
+            spac.SetMove(false);
+        }
+        else
+        {
+            lookDir = new Vector3(MoveDir_H, 0, MoveDir_V);
+            spac.SetMove(true);
+        }
+        
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        // 対象Objのエリア内にいるときに特定の行動をすると...
+
+        // 仮でgimmick/oooという形を想定している
+        if(TagUtility.getParentTagName(other.tag) == "gimmick")
+        {
+            if (Input.GetKeyDown(ActionButton))
+            {
+                spac.Action();
+            }
+        }
     }
 }

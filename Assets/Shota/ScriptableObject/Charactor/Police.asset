@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walk_Speed:
   - 10
-  - 1
-  - 20
-  - 20
-  - 5
+  - 10
+  - 10
+  - 10
+  - 10
