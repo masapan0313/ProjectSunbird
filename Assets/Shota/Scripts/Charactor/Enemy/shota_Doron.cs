@@ -38,6 +38,9 @@ public class shota_Doron : MonoBehaviour {
 
     private shota_NodePoint LastVisitNode;
 
+    [SerializeField]
+    AudioClip[] selist;
+
     private void Start()
     {
         Speed.AddRange(EnemyPropertie.GetWalkSpeed());

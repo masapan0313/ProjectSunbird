@@ -53,6 +53,10 @@ public class shota_Police : MonoBehaviour {
     [SerializeField]
     shota_Police_Animation_Controller spac;
 
+
+    [SerializeField]
+    AudioClip[] selist;
+
     private void Start()
     {
         Speed.AddRange(EnemyPropertie.GetWalkSpeed());
@@ -180,24 +184,15 @@ public class shota_Police : MonoBehaviour {
 
         transform.rotation = Quaternion.Lerp(transform.rotation, lookrota, step);
 
+
+        // 回転速度が遅すぎるとうまくいかない。何故？
         if (Mathf.Abs(Mathf.DeltaAngle(transform.rotation.eulerAngles.y, srvec.y)) < ToleranceAngle)
         {
             ActStep++;
             srvec = Vector3.zero;
         }
     }
-
-    //private void Patrol()
-    //{
-    //    Move(PatrolPoints);
-    //    // 目標地点まである程度近づいたら目標地点を更新する
-    //    if (Vector3.Distance(transform.position, nextTargetPoint.gameObject.transform.position) < ToleranceDistance)
-    //    {
-    //        //ExAction();
-    //        SwitchingTargetNode(PatrolPoints, true);
-    //    }
-
-    //}
+    
     private void Patrol()
     {
 
@@ -264,7 +259,7 @@ public class shota_Police : MonoBehaviour {
         spac.SetSpeed(2);
         Move(AStarPoints);
         // 目標地点まである程度近づいたら目標地点を更新する
-        if (Vector3.Distance(transform.position, nextTargetPoint.gameObject.transform.position) < ToleranceDistance)
+        if (Mathf.Abs(Vector3.Distance(transform.position, nextTargetPoint.gameObject.transform.position)) < ToleranceDistance)
         {
             SwitchingTargetNode(AStarPoints, false);
         }
