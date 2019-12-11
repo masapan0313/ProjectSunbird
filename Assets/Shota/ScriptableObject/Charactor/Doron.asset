@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Doron
   m_EditorClassIdentifier: 
   walk_Speed:
-  - 4
-  - 4
-  - 4
-  - 4
-  - 4
+  - 8
+  - 8
+  - 8
+  - 8
+  - 8

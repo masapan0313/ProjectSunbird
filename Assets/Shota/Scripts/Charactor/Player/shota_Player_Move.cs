@@ -25,6 +25,9 @@ public class shota_Player_Move : MonoBehaviour {
 
     private Vector3 lookDir;
 
+    [SerializeField]
+    AudioClip[] selist;
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -38,15 +41,15 @@ public class shota_Player_Move : MonoBehaviour {
 
     void Update()
     {
-
         // Raw(0,1)を返す,加速入れたい場合はRawを消し、増加値と最高速度を設定
-        // 回転に関してはモデル導入次第検討(メインカメラも巻き込まれるから階層には注意)
-        MoveDir_H = Input.GetAxisRaw("Horizontal");
-        MoveDir_V = Input.GetAxisRaw("Vertical");
+        //MoveDir_H = Input.GetAxisRaw("Horizontal");
+        //MoveDir_V = Input.GetAxisRaw("Vertical");
+        MoveDir_H = Input.GetAxis("Horizontal");
+        MoveDir_V = Input.GetAxis("Vertical");
 
-        
 
-        if(MoveDir_H == 0 && MoveDir_V == 0)
+
+        if (MoveDir_H == 0 && MoveDir_V == 0)
         {
             spac.SetMove(false);
         }

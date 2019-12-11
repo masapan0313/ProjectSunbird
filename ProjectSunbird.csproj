@@ -238,6 +238,7 @@
     <Compile Include="Assets\Shota\Scripts\Node\shota_NodePoint.cs" />
     <Compile Include="Assets\Shota\Scripts\System\Camera_move.cs" />
     <Compile Include="Assets\Shota\Scripts\System\EnableChange.cs" />
+    <Compile Include="Assets\Shota\Scripts\System\SE_Manager.cs" />
     <Compile Include="Assets\Shota\Scripts\System\TagUtility.cs" />
   </ItemGroup>
   <ItemGroup>
