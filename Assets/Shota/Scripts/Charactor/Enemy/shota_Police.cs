@@ -53,9 +53,11 @@ public class shota_Police : MonoBehaviour {
     [SerializeField]
     shota_Police_Animation_Controller spac;
 
-
     [SerializeField]
     AudioClip[] selist;
+
+    [SerializeField]
+    Scenemanager sm;
 
     private void Start()
     {
@@ -252,8 +254,6 @@ public class shota_Police : MonoBehaviour {
             SwitchingTargetNode(AStarPoints, false);
         }
     }
-    
-
     private void Back()
     {
         spac.SetSpeed(2);
@@ -263,6 +263,12 @@ public class shota_Police : MonoBehaviour {
         {
             SwitchingTargetNode(AStarPoints, false);
         }
+    }
+    private void GameOver()
+    {
+        // HQにAlart飛ばしてもいいか
+        // ここ使った時点で終わってるから、確保アニメーションの再生と...と思ったけど
+        // 新たに一個上の概念作ってクリアオーバーメインでステップさせてもいいかも？
     }
 
     public shota_NodePoint GetNextTargetNode()
@@ -292,6 +298,8 @@ public class shota_Police : MonoBehaviour {
         }
         if(other.gameObject.tag == "Player")
         {
+            sm.Over(); // 即死で
+
             isSite = true;
             if (myState != shota_Enemy.ENEMY_STATE.RUN)
             {
@@ -307,11 +315,6 @@ public class shota_Police : MonoBehaviour {
         {
             isSite = false;
         }
-    }
-
-    private void ExAction()
-    {
-        GetComponent<Rigidbody>().AddForce(0, 1.0f, 0,ForceMode.Impulse);
     }
 
 }

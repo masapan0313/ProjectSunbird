@@ -7,6 +7,7 @@ TagManager:
   - Police
   - Node
   - gimmick/colorlook
+  - gimmick/Treasure
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - 
   - Floor
   - Node
-  - 
-  - 
+  - NON?LIGHT
+  - NON_CAM
   - 
   - 
   - 

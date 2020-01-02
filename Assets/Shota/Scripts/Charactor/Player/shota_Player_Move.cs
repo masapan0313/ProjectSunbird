@@ -28,6 +28,9 @@ public class shota_Player_Move : MonoBehaviour {
     [SerializeField]
     AudioClip[] selist;
 
+    [SerializeField]
+    Scenemanager sm;
+
     private void Start()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -72,6 +75,24 @@ public class shota_Player_Move : MonoBehaviour {
             {
                 spac.Action();
             }
+
+            other.gameObject.GetComponentInChildren<PopIcon>().Pop();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (TagUtility.getParentTagName(other.tag) == "gimmick")
+        {
+            other.gameObject.GetComponentInChildren<PopIcon>().nonPop();
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(TagUtility.getChildTagName(collision.gameObject.tag) == "Treasure")
+        {
+            sm.Clear();
         }
     }
 }

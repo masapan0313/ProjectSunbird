@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Shota/Scene/shota_tuto.unity
+- path: Assets/shota_level_design 1.unity
   isLoaded: 1
   isActive: 1

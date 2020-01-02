@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class shota_Color_Switch : MonoBehaviour {
 
     [SerializeField] private shota_lock_state locker;
-
+    [SerializeField]
     private shota_Enum_list.SWITCH_COLOR nowColor; // 現在の色
     private shota_Enum_list.KEY_MARK myMark; // 対応するマーク
 
@@ -37,7 +37,7 @@ public class shota_Color_Switch : MonoBehaviour {
 
     private void OnTriggerStay(Collider collision)
     {
-        if(collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Return))
+        if(collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.Space))
         {
             ChangeColor();
         }

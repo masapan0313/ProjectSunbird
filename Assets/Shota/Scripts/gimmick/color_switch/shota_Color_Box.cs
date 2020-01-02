@@ -9,6 +9,9 @@ public class shota_Color_Box : MonoBehaviour {
 
     [SerializeField] private List<shota_Color_Switch> KeyTarget; // 鍵束
 
+    [SerializeField]
+    Animator anim;
+
     //[SerializeField] private Text text; // テスト用
 
     string str; // テスト用
@@ -17,8 +20,8 @@ public class shota_Color_Box : MonoBehaviour {
 
     private void Start()
     {
-        KeyTarget.Sort((a,b) => a.GetKeyMark() - b.GetKeyMark());
-        LockList.Sort((a, b) => a.GetMark() - b.GetMark());
+        //KeyTarget.Sort((a,b) => a.GetKeyMark() - b.GetKeyMark());
+        //LockList.Sort((a, b) => a.GetMark() - b.GetMark());
 
         if (Debug_mode)
         {
@@ -36,29 +39,45 @@ public class shota_Color_Box : MonoBehaviour {
         
     }
 
+    private void Update()
+    {
+        //KeyCheck();
+    }
+
     public void KeyCheck()
     {
         int opencount = 0;
         int KeyIndexNum = 0;
         //List<shota_Color_Switch> keytarget_clone = new List<shota_Color_Switch>(KeyTarget);
 
-        foreach (shota_lock_state ll in LockList)
+        //foreach (shota_lock_state ll in LockList)
+        //{
+        //    if (KeyTarget[KeyIndexNum].GetNowColor() == ll.GetSwitchColor())
+        //    {
+        //        opencount++;
+        //        KeyIndexNum++;
+        //    }
+        //    else
+        //    {
+        //        break;
+        //    }
+        //}
+
+        for(int i = LockList.Count-1;i >= 0; i--)
         {
-            if (KeyTarget[KeyIndexNum].GetNowColor() == ll.GetSwitchColor())
+            if (KeyTarget[i].GetNowColor() == LockList[i].GetSwitchColor())
             {
                 opencount++;
                 KeyIndexNum++;
-            }
-            else
-            {
-                break;
+
+                Debug.Log(opencount);
             }
         }
 
         if(opencount == LockList.Count)
         {
             Debug.Log("すべてそろいました!!!!!!!!!!!!!");
-            gameObject.GetComponent<MeshRenderer>().material.color = new Color(1, 1, 0);
+            anim.Play("open", 0);
         }
     }
     

@@ -20,5 +20,4 @@ public class shota_Police_Animation_Controller : MonoBehaviour {
         isMove = a;
         animator.SetBool("isMove", isMove);
     }
-
 }
