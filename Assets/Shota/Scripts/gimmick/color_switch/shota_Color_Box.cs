@@ -16,6 +16,8 @@ public class shota_Color_Box : MonoBehaviour {
 
     string str; // テスト用
 
+    int count = 0; // 再生を一度のみに制限
+
     public bool Debug_mode;
 
     private void Start()
@@ -76,6 +78,11 @@ public class shota_Color_Box : MonoBehaviour {
 
         if(opencount == LockList.Count)
         {
+            if (count < 1)
+            {
+                GetComponent<AudioSource>().Play();
+                count += 1;
+            }
             Debug.Log("すべてそろいました!!!!!!!!!!!!!");
             anim.Play("open", 0);
         }

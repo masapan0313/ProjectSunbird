@@ -56,6 +56,7 @@ public class shota_Color_Switch : MonoBehaviour {
 
         nowColor = (shota_Enum_list.SWITCH_COLOR)proxyColor;
         imageUpdate();
+        GetComponent<AudioSource>().Play();
 
         // ここ親子関係にして楽してるけど、どの構造がいいのか不明なのでそのまま
         transform.GetComponentInParent<shota_Color_Box>().KeyCheck();

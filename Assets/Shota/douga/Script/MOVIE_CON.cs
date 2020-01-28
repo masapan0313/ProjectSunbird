@@ -20,6 +20,13 @@ public class MOVIE_CON : MonoBehaviour {
 
     bool CountTrigger = false;
 
+    AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = this.GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if (!Title_Mode)
@@ -74,6 +81,8 @@ public class MOVIE_CON : MonoBehaviour {
             }
             if (timeCount > staytime[2] && timeCount < staytime[2]+.2)
             {
+                audioSource.loop = false;
+                audioSource.Stop();
                 TitleTop.SetActive(true);
             }
         }

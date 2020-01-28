@@ -67,6 +67,16 @@ public class shota_Police : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        if (isMove)
+        {
+            if(!GetComponent<AudioSource>().isPlaying)
+            GetComponent<AudioSource>().Play();
+        }
+        if(!isMove)
+        {
+            if (GetComponent<AudioSource>().isPlaying)
+            GetComponent<AudioSource>().Stop();
+        }
         switch (myState)
         {
             case shota_Enemy.ENEMY_STATE.PATROL:

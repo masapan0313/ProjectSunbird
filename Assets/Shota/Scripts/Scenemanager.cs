@@ -21,6 +21,12 @@ public class Scenemanager : MonoBehaviour {
 
     bool isEnd = false;
 
+    [SerializeField]
+    AudioSource aS;
+
+    [SerializeField]
+    AudioClip[] audioClips;
+
     private void Update()
     {
         if (isEnd)
@@ -35,6 +41,7 @@ public class Scenemanager : MonoBehaviour {
     public void Over()
     {
         MoveStop();
+        aS.PlayOneShot(audioClips[0]);
         coanim[1].Play("over", 0);
         isEnd = true;
     }
@@ -42,6 +49,7 @@ public class Scenemanager : MonoBehaviour {
     public void Clear()
     {
         MoveStop();
+        aS.PlayOneShot(audioClips[1]);
         coanim[0].Play("clear", 0);
         isEnd = true;
     }
@@ -53,11 +61,11 @@ public class Scenemanager : MonoBehaviour {
         player.GetComponent<shota_Player_Move>().enabled = false;
         for (int i = police.Length - 1; i >= 0; i--)
         {
-            police[i].GetComponent<shota_Police>().enabled = false;
+            police[i].SetActive(false);
         }
         for (int i = Doron.Length - 1; i >= 0; i--)
         {
-            Doron[i].GetComponent<shota_Doron>().enabled = false;
+            Doron[i].SetActive(false);
         }
     }
 }

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/shota_level_design 1.unity
+- path: Assets/stage02.unity
   isLoaded: 1
   isActive: 1

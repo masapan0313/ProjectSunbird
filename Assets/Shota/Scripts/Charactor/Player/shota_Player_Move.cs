@@ -56,8 +56,12 @@ public class shota_Player_Move : MonoBehaviour {
         {
             spac.SetMove(false);
         }
-        else
+        if(MoveDir_H != 0 || MoveDir_V != 0)
         {
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                GetComponent<AudioSource>().Play();
+            }
             lookDir = new Vector3(MoveDir_H, 0, MoveDir_V);
             spac.SetMove(true);
         }

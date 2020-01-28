@@ -432,7 +432,6 @@ GameObject:
   - component: {fileID: 114699096403787982}
   - component: {fileID: 82133112604840062}
   - component: {fileID: 135125969422460958}
-  - component: {fileID: 114783288581676530}
   - component: {fileID: 114809177994392604}
   m_Layer: 0
   m_Name: Player 1
@@ -690,7 +689,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1641967289838540}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.346176, y: 12.92, z: -63.277622}
+  m_LocalPosition: {x: 1.5, y: 0.8, z: -6.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4261278287575396}
@@ -1363,10 +1362,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
+  m_audioClip: {fileID: 8300000, guid: d5d1ad394ed4d7443b2edd264cbfbb14, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1.7
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1421,7 +1420,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -1501,17 +1500,6 @@ MonoBehaviour:
   ActionButton: 32
   selist: []
   sm: {fileID: 0}
---- !u!114 &114783288581676530
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1641967289838540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f4fee7421301eb42b4b11ed8659988e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114809177994392604
 MonoBehaviour:
   m_ObjectHideFlags: 1
